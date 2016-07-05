@@ -1,0 +1,131 @@
+{
+  "purchases": [
+    {
+      "date": 160602,
+      "description": "fries and burgers",
+      "amount": 10,
+      "merchant": "McDonalds",
+      "type": "food"
+    },
+    {
+      "date": 160604,
+      "description": "Home Rent",
+      "amount": 574,
+      "merchant": "MHM Properties",
+      "type": "bills"
+    },
+    {
+      "date": 160605,
+      "description": "School Supplies",
+      "amount": 32.43,
+      "merchant": "Illini Book Store",
+      "type": "other"
+    },
+    {
+      "date": 160606,
+      "description": "Watched Xmen Apocalypse",
+      "amount": 12,
+      "merchant": "Nearby Theater",
+      "type": "entertainment"
+    },
+    {
+      "date": 160607,
+      "description": "Surface Pro 4",
+      "amount": 766,
+      "merchant": "Microsoft",
+      "type": "other"
+    },
+    {
+      "date": 160609,
+      "description": "Uber to Work",
+      "amount": 10,
+      "merchant": "Uber",
+      "type": "other"
+    },
+    {
+      "date": 160611,
+      "description": "Booze for Party",
+      "amount": 62.3,
+      "merchant": "County Market",
+      "type": "food"
+    },
+    {
+      "date": 160616,
+      "description": "Replaced Desks",
+      "amount": 24.8,
+      "merchant": "MHM Properties",
+      "type": "bills"
+    },
+    {
+      "date": 160618,
+      "description": "Grocery Shopping",
+      "amount": 41.8,
+      "merchant": "County Market",
+      "type": "food"
+    },
+    {
+      "date": 160619,
+      "description": "Overwatch",
+      "amount": 59.99,
+      "merchant": "Blizzard",
+      "type": "entertainment"
+    },
+    {
+      "date": 160620,
+      "description": "Treehouse Subscription",
+      "amount": 70,
+      "merchant": "Team Treehouse",
+      "type": "other"
+    },
+    {
+      "date": 160621,
+      "description": "Tanktops",
+      "amount": 43.5,
+      "merchant": "American Eagle",
+      "type": "clothes"
+    },
+    {
+      "date": 160622,
+      "description": "Electric Bill",
+      "amount": 73,
+      "merchant": "Ameren",
+      "type": "bills"
+    },
+    {
+      "date": 160624,
+      "description": "Sushi and Fancy Food",
+      "amount": 70,
+      "merchant": "Sakanaya",
+      "type": "food"
+    },
+    {
+      "date": 160625,
+      "description": "Goat Simulator",
+      "amount": 8,
+      "merchant": "Steam",
+      "type": "entertainment"
+    },
+    {
+      "date": 160625,
+      "description": "New Underwear",
+      "amount": 52.9,
+      "merchant": "Victoria's Secret",
+      "type": "clothes"
+    },
+    {
+      "date": 160627,
+      "description": "Groceries for Party",
+      "amount": 42.3,
+      "merchant": "County Market",
+      "type": "food"
+    },
+    {
+      "date": 160701,
+      "description": "HyperX Cloud 2",
+      "amount": 75,
+      "merchant": "Amazon",
+      "type": "entertainment"
+    }
+  ],
+  "lastUpdated" : 1607011223
+}
