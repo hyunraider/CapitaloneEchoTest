@@ -49,7 +49,7 @@ function getPercentage(){
   return retval;
 }
 
-function getMerchant(merchantID, purchaseID) {
+function getMerchant(merchantID, purchaseID, date, amount, description) {
   var url = domain + "merchants/" + merchantID + "?key=" + apiKey;
   var writeStuff = "";
   //console.log(url);
@@ -62,15 +62,12 @@ function getMerchant(merchantID, purchaseID) {
         //process.stdout.write(d);
         //var jsonContent = d //JSON.parse(d);
         var jsonContent = JSON.parse(d);
+        console.log(jsonContent);
         MongoClient.connect(mongourl, function(err, db){
           assert.equal(null, err);
           console.log("Successfully connected to server");
 
-          jsonContent.forEach(function(element, index){
-            console.log(element);
-            console.log(typeof element);
-            db.collection('testdb').insert({"_id": purchaseID, "merchant_id": merchantID, "merchant_name:": element.name, "merchant_type": element.category});
-          });
+          db.collection('testdb').insert({"_id": purchaseID, "merchant_id": merchantID, "merchant_name:": jsonContent.name, "merchant_type": jsonContent.category, "date": date, "amount": amount, "description": description});
 
           db.close();
         });
@@ -79,7 +76,8 @@ function getMerchant(merchantID, purchaseID) {
         console.log('It saved mang');
       });
       // process.stdout.write(jsonContent);
-      */          });
+      */
+      });
     });
 
     req.end();
@@ -159,7 +157,7 @@ function getMerchant(merchantID, purchaseID) {
             //console.log(obj);
             console.log("outerloop: " + x);
             console.log(obj);
-            getMerchant(obj.merchant_id, printPurchases(obj));
+            getMerchant(obj.merchant_id, obj._id, obj.purchase_date, obj.amount, obj.description);
           }
           /*MongoClient.connect(mongourl, function(err, db){
             assert.equal(null, err);
