@@ -71,12 +71,6 @@ function getMerchant(merchantID, purchaseID, date, amount, description) {
 
           db.close();
         });
-        /*                fs.writeFile('message.txt', writeStuff , function(err) {
-        if (err) throw err;
-        console.log('It saved mang');
-      });
-      // process.stdout.write(jsonContent);
-      */
       });
     });
 
@@ -108,35 +102,6 @@ function getMerchant(merchantID, purchaseID, date, amount, description) {
       }
     ]);
   }
-/*
-  function getTotalAmountSpent(date){
-    var url= domain + "accounts/" + accID + "/purchases?key=" + apiKey;
-    console.log(url);
-
-    var amount = 0;
-    var req = http.request(url,
-      function (res) {
-        //console.log('statusCode: ', res.statusCode);
-        //console.log('headers: ', res.headers);
-
-        res.on('data', function (d) {
-
-          var jsonContent = JSON.parse(d);
-
-          jsonContent.forEach(function(element, index){
-            amount+= element.amount;
-          });
-
-          storage.storeTotalAmount(amount);
-      });
-    });
-
-    req.end();
-
-    req.on('error', function (e) {
-      console.error(e);
-    });
-  }*/
 
   function getAllPurchases(){
     var url= domain + "accounts/" + accID + "/purchases?key=" + apiKey;
@@ -159,29 +124,16 @@ function getMerchant(merchantID, purchaseID, date, amount, description) {
             console.log(obj);
             getMerchant(obj.merchant_id, obj._id, obj.purchase_date, obj.amount, obj.description);
           }
-          /*MongoClient.connect(mongourl, function(err, db){
-            assert.equal(null, err);
-            console.log("Successfully connected to server");
-
-            jsonContent.forEach(function(element, index){
-              console.log(element);
-              console.log(typeof element);
-              db.collection('testdb').insert(element);
-            });
-
-            db.close();
-          });*/
-
+        });
       });
-    });
 
-    req.end();
+      req.end();
 
-    req.on('error', function (e) {
-      console.error(e);
-    });
-  }
+      req.on('error', function (e) {
+        console.error(e);
+      });
+    }
 
-getAllPurchases();
+    getAllPurchases();
 
-module.exports.getPercentage = getPercentage;
+    module.exports.getPercentage = getPercentage;
